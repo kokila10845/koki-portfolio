@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aruna Devi M — Portfolio</title>
+<title>Kokila S — Portfolio</title>
 
 <style>
 /* ---------- GLOBAL ---------- */
@@ -12,11 +12,10 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #0b1220;
-  color: #111;
   overflow-x: hidden;
 }
 
-/* ---------- ANIMATION BACKGROUND ---------- */
+/* ---------- BACKGROUND ANIMATION ---------- */
 
 #bgCanvas {
   position: fixed;
@@ -25,16 +24,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.12;      /* watermark transparency */
+  opacity: 0.12; /* watermark transparency */
   pointer-events: none;
-}
-
-/* ---------- CONTENT CONTAINER ---------- */
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -42,7 +33,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(10px);
   padding: 12px;
   z-index: 10;
@@ -52,10 +43,10 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  gap: 25px;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 25px;
 }
 
 nav a {
@@ -64,22 +55,36 @@ nav a {
   color: #1a1a1a;
 }
 
-/* ---------- CARD STYLE ---------- */
+/* ---------- CONTAINER ---------- */
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ---------- CARD ---------- */
 
 .card {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.94);
   border-radius: 14px;
   padding: 28px;
   margin-bottom: 30px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* ---------- TYPOGRAPHY ---------- */
+/* ---------- TEXT ---------- */
 
 h1 {
   margin-top: 0;
   font-size: 2.5rem;
+  text-align: center;
   color: #0b1220;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
 }
 
 h2 {
@@ -92,19 +97,6 @@ ul {
   line-height: 1.7;
 }
 
-/* ---------- HEADER ---------- */
-
-.header {
-  text-align: center;
-}
-
-.subtitle {
-  color: #555;
-  font-size: 1.1rem;
-}
-
-/* ---------- FOOTER ---------- */
-
 footer {
   text-align: center;
   padding: 30px;
@@ -115,4 +107,164 @@ footer {
 
 <body>
 
-<!--
+<!-- SCROLL ANIMATION -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- NAVBAR -->
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="card">
+    <h1>Kokila S</h1>
+    <p class="subtitle">
+      B.E. Electronics and Communication Engineering (3rd Year)<br>
+      Tamil Nadu, India
+    </p>
+  </div>
+
+  <!-- OBJECTIVE -->
+  <div id="about" class="card">
+    <h2>Career Objective</h2>
+    <p>
+      Motivated Electronics and Communication Engineering student seeking 
+      entry-level opportunities in embedded systems, core electronics, or IT sectors 
+      where I can apply my technical knowledge and practical experience to contribute 
+      effectively while continuing to learn and grow.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div id="education" class="card">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.E. ECE (3rd Year)</strong> — CGPA: 7.95<br>
+          Government College of Engineering, Tirunelveli</li><br>
+      <li><strong>12th Standard:</strong> 89.0%<br>
+          Government Girls Higher Secondary School</li><br>
+      <li><strong>10th Standard:</strong> 100%<br>
+          Government Girls Higher Secondary School</li>
+    </ul>
+  </div>
+
+  <!-- INTERNSHIP -->
+  <div id="internship" class="card">
+    <h2>Internship</h2>
+    <p><strong>Industrial Automation & Embedded Systems Intern — Emertxe</strong></p>
+    <ul>
+      <li>Gained hands-on experience in embedded systems and microcontrollers</li>
+      <li>Learned industrial automation concepts and real-time applications</li>
+      <li>Worked with industry-relevant tools and development practices</li>
+    </ul>
+  </div>
+
+  <!-- PROJECT -->
+  <div id="project" class="card">
+    <h2>Project</h2>
+    <p><strong>Anti-Sleep Alarm Glass</strong></p>
+    <ul>
+      <li>Developed wearable glasses to detect drowsiness and trigger an alert</li>
+      <li>Enhances safety for drivers and students</li>
+      <li>Uses sensors and microcontroller-based control system</li>
+      <li>Provides real-time warning system to prevent accidents</li>
+    </ul>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="card">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Embedded Systems</li>
+      <li>Industrial Automation</li>
+      <li>Microcontrollers</li>
+      <li>Electronics Circuit Design</li>
+      <li>C/C++ (Basic)</li>
+      <li>Digital Electronics</li>
+      <li>Analog Electronics</li>
+      <li>Communication Systems</li>
+    </ul>
+
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Problem Solving</li>
+      <li>Quick Learner</li>
+      <li>Teamwork</li>
+      <li>Adaptability</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Kokila S — Portfolio
+</footer>
+
+<!-- ---------- SCROLL-BASED FRAME ANIMATION ---------- -->
+
+<script>
+const frameCount = 240;
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+
+const images = [];
+
+for (let i = 1; i <= frameCount; i++) {
+  const img = new Image();
+  const num = String(i).padStart(3, '0');
+  img.src = `frames/ezgif-frame-${num}.jpg`;
+  images.push(img);
+}
+
+function drawFrame(index) {
+  const img = images[index];
+  if (!img.complete) return;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  const scale = Math.max(
+    canvas.width / img.width,
+    canvas.height / img.height
+  );
+
+  const x = (canvas.width - img.width * scale) / 2;
+  const y = (canvas.height - img.height * scale) / 2;
+
+  ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+}
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const maxScroll =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const frameIndex = Math.min(
+    frameCount - 1,
+    Math.floor((scrollTop / maxScroll) * frameCount)
+  );
+
+  drawFrame(frameIndex);
+});
+
+images[0].onload = () => drawFrame(0);
+
+window.addEventListener("resize", resizeCanvas);
+</script>
+
+</body>
+</html>
